@@ -16,7 +16,7 @@ var Enemy = function() {
 };
 
 Enemy.prototype.update = function(dt) {
-    this.x = this.x + (this.speed + (returns * 15)) * dt;
+    this.x = this.x + (this.speed + (returns * 150)) * dt;
     this.right = this.x + 96;
     if (this.x > 606) {
         var index = allEnemies.indexOf(this);
@@ -35,7 +35,7 @@ function newEnemies() {
     allEnemies.push(enemy);
 };
 
-var spawnInterval = setInterval(newEnemies, 1500);
+var spawnInterval = setInterval(newEnemies, 1000);
 
 var Player = function() {
     this.direction = 0; 
