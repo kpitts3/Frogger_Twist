@@ -17,8 +17,8 @@ var Enemy = function() {
 
 Enemy.prototype.update = function(dt) {
     this.x = this.x + (this.speed + (returns * 150)) * dt;
-    this.right = this.x + 96;
-    if (this.x > 400) {
+    this.right = this.x + 150;
+    if (this.x > 606) {
         var index = allEnemies.indexOf(this);
         allEnemies.splice(index, 1);
     }
